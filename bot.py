@@ -10,8 +10,8 @@ from src.follow_protocol import follow_protocol
 from src.unfollow_protocol import unfollow_protocol
 
 bot = InstaBot(
-    login='username',  # Enter username (lowercase). Do not enter email!
-    password='password',
+    login=os.environ.get('ABRICOT_INSTA_USERNAME', ''),  # Enter username (lowercase). Do not enter email!
+    password=os.environ.get('ABRICOT_INSTA_PASSWORD', ''),
     start_at_h = 10,
     start_at_m = 39,
     end_at_h = 23,
